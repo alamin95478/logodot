@@ -97,9 +97,12 @@ p{
 	text-decoration: none;
 	font-weight: 800;
 }
-.main-nav .menu-bar{}
 .main-nav .menu-bar ul{
-	float: right;
+	position: relative;
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	margin: 0;
 }
 .main-nav .menu-bar li{
 	float: left;
@@ -749,7 +752,63 @@ ul.ftr-nav {
 
 /*end*/
 }
-
+@media (max-width: 991.98px){
+/*Toggle start*/
+.toggle{
+	display: flex;
+	height: 30px;
+	width: 30px;
+	position: relative;
+	cursor: pointer;
+}
+.toggle:before{
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: #343D46;
+	top: 4px;
+	position: absolute;
+	z-index: 1;
+	box-shadow: 0 10px 0 #343D46;
+}
+.toggle:after{
+	content: '';
+	height: 2px;
+	width: 100%;
+	background: #343D46;
+	bottom: 4px;
+	position: absolute;
+	z-index: 1;
+}
+#header .main-nav .menu-bar ul{
+	position: absolute;
+	top: 78px;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	text-align: center;
+	overflow: auto;
+	display: flex;
+	justify-content: center;
+	background: #fff;
+	visibility: hidden;
+	opacity: 0;
+}
+#header.active .main-nav .menu-bar ul{
+	display: block;
+	visibility: visible;
+	opacity: 1;
+	padding-top: 20px;
+}
+#header .main-nav .menu-bar ul li{
+	padding: 10px 0;
+}
+#header.active .main-nav .menu-bar li a{
+	margin: 5px 0;
+	font-size: 20px;
+}
+/*Toggle end*/
+}
 @media (min-width: 768px) and (max-width: 991.98px) {
 
 p {
@@ -768,35 +827,7 @@ p {
 .main-nav .menu-bar li a {
     font-size: 16px;
 }
-/*Toggle start*/
-.toggle{
-	display: none;
-	height: 30px;
-	width: 30px;
-	position: relative;
-	cursor: pointer;
-}
-.toggle:before{
-	content: '';
-	height: 2px;
-	width: 100%;
-	background: #343D46;
-	top: 4px;
-	position: absolute;
-	z-index: 1;
-	box-shadow: 0 10px 0 #343D46;
 
-}
-.toggle:after{
-	content: '';
-	height: 2px;
-	width: 100%;
-	background: #343D46;
-	bottom: 4px;
-	position: absolute;
-	z-index: 1;
-}
-/*Toggle end*/
 .hero .hero-img img {
     height: 100%;
     width: 100%;
@@ -839,13 +870,13 @@ p {
 
 }
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+/*@media (min-width: 992px) and (max-width: 1199.98px) {
 
 }
 
 @media (min-width: 1200px) {
 
-}
+}*/
 
 
 
