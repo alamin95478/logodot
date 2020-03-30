@@ -398,6 +398,9 @@ p{
     max-width: 100%;
     margin-top: 30px;
 }
+.ftr-links .ftr-col{
+	margin-bottom: 35px;
+}
 .ftr-links .ftr-col h5 {
     font-size: 25px;
     margin-bottom: 20px;
