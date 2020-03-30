@@ -3,6 +3,9 @@
 	margin: 0;
 	padding: 0;
 }
+html{
+	scroll-behavior: smooth;
+}
 body{
 	font-family: 'Baloo Thambi 2', cursive;
 	font-size:14px;
@@ -89,6 +92,7 @@ p{
 .main-nav{
 	background: #fff;
 	height: 79px;
+	width: 100%;
 }
 .main-nav .logo{
 	font-size: 50px;
@@ -105,9 +109,11 @@ p{
 	margin: 0;
 }
 .main-nav .menu-bar li{
-	float: left;
+	display: flex;
+	align-items: center;
+	justify-content: right;
 	list-style: none;
-	padding: 10px;
+	padding-left: 15px;
 }
 .main-nav .menu-bar li a{
 	font-size: 18px;
@@ -563,11 +569,6 @@ p {
 .main-nav .logo {
     font-size: 35px;
 }
-/**********************************************************************************/
-.main-nav .menu-bar {
-    display: none;
-}
-/**********************************************************************************/
 .hero .hero-img {
     width: 100%;
     order: 1;
@@ -669,11 +670,6 @@ ul.ftr-nav {
 .main-nav .logo {
     font-size: 35px;
 }
-/**********************************************************************************/
-.main-nav .menu-bar {
-    display: none;
-}
-/**********************************************************************************/
 .hero .hero-img {
     width: 45%;
 }
@@ -752,6 +748,8 @@ ul.ftr-nav {
 
 /*end*/
 }
+
+
 @media (max-width: 991.98px){
 /*Toggle start*/
 .toggle{
@@ -780,6 +778,9 @@ ul.ftr-nav {
 	position: absolute;
 	z-index: 1;
 }
+#header .main-nav .menu-bar{
+
+}
 #header .main-nav .menu-bar ul{
 	position: absolute;
 	top: 78px;
@@ -799,9 +800,12 @@ ul.ftr-nav {
 	visibility: visible;
 	opacity: 1;
 	padding-top: 20px;
-}
-#header .main-nav .menu-bar ul li{
-	padding: 10px 0;
+    z-index: 1000;
+    position: absolute;
+    top: 55px;
+    width: 100%;
+    height: auto;
+    padding: 7%;
 }
 #header.active .main-nav .menu-bar li a{
 	margin: 5px 0;
@@ -809,6 +813,9 @@ ul.ftr-nav {
 }
 /*Toggle end*/
 }
+
+
+
 @media (min-width: 768px) and (max-width: 991.98px) {
 
 p {
@@ -827,7 +834,9 @@ p {
 .main-nav .menu-bar li a {
     font-size: 16px;
 }
-
+#header.active .main-nav .menu-bar ul {
+    top: 78px;
+}
 .hero .hero-img img {
     height: 100%;
     width: 100%;
